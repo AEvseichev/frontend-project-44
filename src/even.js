@@ -10,7 +10,7 @@ function isEven() {
   let countTrueAnswer = 0
 
   while (countTrueAnswer < 3) {
-    const randomNumber = crypto.randomNumber(0, 100)
+    const randomNumber = crypto.randomInt(0, 100)
     console.log(`Question: ${randomNumber}`)
     const userAnswer = readLineSync.question('Your answer: ')
 
