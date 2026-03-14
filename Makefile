@@ -9,4 +9,10 @@ publish: # отладка перед публикацией
 
 link: # устанавливаем пакет 
 	npm link --dry-run
+
+lint: # запуск eslint
+	npx eslint .
+
+lint-fix: 
+	npx eslint --fix .
 	
