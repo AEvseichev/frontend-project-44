@@ -8,7 +8,7 @@ function isEven() {
 
   let countTrueAnswer = 0
 
-  while (countTrueAnswer <= 3) {
+  while (countTrueAnswer < 3) {
     const randomNumber = Math.floor(Math.random() * 101)
     console.log(`Question: ${randomNumber}`)
     const yourAnswer = readLineSync.question('Your answer: ')

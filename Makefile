@@ -4,6 +4,9 @@ install: # устанавливаем зависимости
 brain-games: # start games
 	node bin/brain-games.js
 
+brain-even: # start game brain-even
+	node bin/brain-even.js
+
 publish: # отладка перед публикацией
 	npm publish --dry-run
 
