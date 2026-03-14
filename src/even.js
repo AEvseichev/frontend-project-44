@@ -1,4 +1,5 @@
 import readLineSync from 'readline-sync'
+import crypto from 'crypto'
 
 function isEven() {
   console.log('Welcome to the Brain Games!')
@@ -9,7 +10,7 @@ function isEven() {
   let countTrueAnswer = 0
 
   while (countTrueAnswer < 3) {
-    const randomNumber = Math.floor(Math.random() * 101)
+    const randomNumber = crypto.randomNumber(0, 100)
     console.log(`Question: ${randomNumber}`)
     const userAnswer = readLineSync.question('Your answer: ')
 
