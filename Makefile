@@ -4,8 +4,9 @@ install: # устанавливаем зависимости
 brain-games: # start games
 	node bin/brain-games.js
 
-publish:
+publish: # отладка перед публикацией
 	npm publish --dry-run
 
-link:
+link: # устанавливаем пакет 
 	npm link
+	
