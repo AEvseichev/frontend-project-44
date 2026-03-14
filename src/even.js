@@ -11,20 +11,18 @@ function isEven() {
   while (countTrueAnswer < 3) {
     const randomNumber = Math.floor(Math.random() * 101)
     console.log(`Question: ${randomNumber}`)
-    const yourAnswer = readLineSync.question('Your answer: ')
+    const userAnswer = readLineSync.question('Your answer: ')
 
-    if (randomNumber % 2 === 0 && yourAnswer === 'yes') {
-      console.log('Correct!')
-      countTrueAnswer += 1
-    }
-    else if (randomNumber % 2 !== 0 && yourAnswer === 'no') {
+    const isEven = randomNumber % 2 === 0
+    const correctAnswer = isEven ? 'yes' : 'no'
+
+    if (userAnswer === correctAnswer) {
       console.log('Correct!')
       countTrueAnswer += 1
     }
     else {
-      console.log(`'yes' is wrong answer ;(.
-        Correct answer was 'no'.
-        Let's try again, ${userName}!`)
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
+      console.log(`Let's try again, ${userName}!`)
       countTrueAnswer = 0
     }
   }
