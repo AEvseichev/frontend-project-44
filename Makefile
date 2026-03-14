@@ -8,5 +8,5 @@ publish: # отладка перед публикацией
 	npm publish --dry-run
 
 link: # устанавливаем пакет 
-	npm link
+	npm link --dry-run
 	
