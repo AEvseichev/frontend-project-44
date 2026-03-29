@@ -1,5 +1,5 @@
 import startEngine from '../index.js'
-import getProgression from '../utils.js'
+import { getProgression } from '../utils.js'
 import crypto from 'crypto'
 
 const description = 'What number is missing in the progression?'
