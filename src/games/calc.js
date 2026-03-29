@@ -4,11 +4,11 @@ import startEngine from '../index.js'
 const description = 'What is the result of the expression?'
 
 const startRound = () => {
-  const numberOne = crypto(0, 101)
-  const numberTwo = crypto(0, 101)
+  const numberOne = crypto.randomInt(0, 101)
+  const numberTwo = crypto.randomInt(0, 101)
   const operators = ['+', '-', '*', '/']
   const randomOper = operators[Math.floor(Math.random() * operators.length)]
-  const question = String(numberOne + ' ' + randomOper + ' ' + numberTwo)
+  const question = `${numberOne} ${randomOper} ${numberTwo}`
   let trueAnswer = 0
 
   switch (randomOper) {
@@ -16,13 +16,13 @@ const startRound = () => {
       trueAnswer = numberOne + numberTwo
       break
     case '-':
-      trueAnswer = numberOne - numberOne
+      trueAnswer = numberOne - numberTwo
       break
     case '*':
       trueAnswer = numberOne * numberTwo
       break
     case '/':
-      trueAnswer = numberOne / numberTwo
+      trueAnswer = Math.floor(numberOne / numberTwo)
       break
     default:
       console.log('Ошибка')
