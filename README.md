@@ -46,6 +46,7 @@ Determine if the given number is a prime number.
 [![asciicast](https://asciinema.org/a/pw1jR5T3IpqYK1se.svg)](https://asciinema.org/a/pw1jR5T3IpqYK1se)
 
 Usage
+
 To start a game, use the following commands:
 
 brain-even
