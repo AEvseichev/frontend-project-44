@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import isEven from '../src/even.js'
+import startRound from '../src/even.js'
 
-isEven()
+startRound()

@@ -1,33 +1,14 @@
-import readLineSync from 'readline-sync'
 import crypto from 'crypto'
+import startEngine from './index.js'
 
-function isEven() {
-  console.log('Welcome to the Brain Games!')
-  const userName = readLineSync.question('May I have your name?')
-  console.log(`Hello, ${userName}!`)
-  console.log('Answer "yes" if the number is even, otherwise answer "no"')
+const description = 'Answer "yes" if the number is even, otherwise answer "no"'
 
-  let countTrueAnswer = 0
+const startRound = () => {
+  const randomNumber = crypto.randomInt(0, 101)
+  const question = String(randomNumber)
+  const trueAnswer = randomNumber % 2 === 0 ? 'yes' : 'no'
 
-  while (countTrueAnswer < 3) {
-    const randomNumber = crypto.randomInt(0, 100)
-    console.log(`Question: ${randomNumber}`)
-    const userAnswer = readLineSync.question('Your answer: ')
-
-    const isEven = randomNumber % 2 === 0
-    const correctAnswer = isEven ? 'yes' : 'no'
-
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!')
-      countTrueAnswer += 1
-    }
-    else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
-      console.log(`Let's try again, ${userName}!`)
-      countTrueAnswer = 0
-    }
-  }
-  console.log(`Congratulations, ${userName}!`)
+  return [question, trueAnswer]
 }
 
-export default isEven
+export default () => startEngine(description, startRound)
