@@ -11,7 +11,7 @@ const startRound = () => {
   progression[hiddenNumber] = '..'
   const question = progression.join(' ')
 
-  return [question, trueAnswer]
+  return [question, String(trueAnswer)]
 }
 
 export default () => startEngine(description, startRound)

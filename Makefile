@@ -13,6 +13,9 @@ brain-calc: # start game brain-calc
 brain-gcd: # start game brain-gcd
 	node bin/brain-gcd.js
 
+brain-progression: # start game brain-progression
+	node bin/brain-progression.js
+
 publish: # отладка перед публикацией
 	npm publish --dry-run
 
