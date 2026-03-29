@@ -1,6 +1,6 @@
 import crypto from 'crypto'
 
-const getProgression = () => {
+export const getProgression = () => {
   const start = crypto.randomInt(0, 50)
   const step = crypto.randomInt(1, 11)
   const length = crypto.randomInt(5, 11)
@@ -13,7 +13,7 @@ const getProgression = () => {
   return progression
 }
 
-const isPrime = (number) => {
+export const isPrime = (number) => {
   if (number < 2) {
     return false
   }
