@@ -6,7 +6,7 @@ const description = 'What is the result of the expression?'
 const startRound = () => {
   const numberOne = crypto.randomInt(0, 101)
   const numberTwo = crypto.randomInt(0, 101)
-  const operators = ['+', '-', '*', '/']
+  const operators = ['+', '-', '*']
   const randomOper = operators[Math.floor(Math.random() * operators.length)]
   const question = `${numberOne} ${randomOper} ${numberTwo}`
   let trueAnswer = 0
@@ -20,9 +20,6 @@ const startRound = () => {
       break
     case '*':
       trueAnswer = numberOne * numberTwo
-      break
-    case '/':
-      trueAnswer = Math.floor(numberOne / numberTwo)
       break
     default:
       console.log('Ошибка')
